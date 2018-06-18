@@ -7,12 +7,9 @@
 import React, { Component } from 'react';
 import {
   Platform,
-  StyleSheet,
-  View,
-  Text,
-  Image
+  StyleSheet
 } from 'react-native';
-import { Container, Header, Tab, Tabs, TabHeading, Icon, Text1 } from 'native-base';
+import {Container, Header, Content, Footer, Button, FooterTab, Tab, Card, CardItem, Body, ListItem, List, Tabs, TabHeading, ScrollableTab, Text, Icon } from 'native-base';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -40,10 +37,37 @@ export default class App extends Component {
       // </View>
       
       <Container>
-      <Header>
-      <Text style={styles.welcome}>Some Styled text</Text>
-      </Header>
-      </Container>
+      <Tabs initialPage={1}>
+        <Tab heading={<TabHeading><Text>Камера</Text><Icon type="FontAwesome" name="camera"/></TabHeading>}>
+         <Text>Apps</Text>
+        </Tab>
+        <Tab heading={<TabHeading><Text>Информация</Text><Icon type="FontAwesome" name="car"/></TabHeading>}>
+        <Card>
+        <CardItem>
+          <Body>
+          <Icon type="FontAwesome" name="home" />
+            <Text>
+               //Your text here
+            </Text>
+          </Body>
+        </CardItem>
+      </Card>
+        </Tab>
+        <Tab heading={<TabHeading><Text>Настройки</Text><Icon type="FontAwesome" name="cog"/></TabHeading>}>
+        <List>
+        <ListItem>
+          <Text>Один</Text>
+        </ListItem>
+        <ListItem>
+          <Text>Два</Text>
+        </ListItem>
+        <ListItem>
+          <Text>Три</Text>
+        </ListItem>
+      </List>
+        </Tab>
+      </Tabs>
+    </Container>
    
     );
   }
