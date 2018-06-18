@@ -25,32 +25,26 @@ const instructions = Platform.select({
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          React!
-        </Text>
-        <Image source="https://pp.userapi.com/c627723/v627723684/2137d/aQAOkMKgpSQ.jpg"></Image>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
-    //   <Container>
-    //   <Header hasTabs/>
-    //   <Tabs>
-    //     <Tab heading={ <TabHeading><Text>Camera</Text></TabHeading>}>
-          
-    //     </Tab>
-    //     <Tab heading={ <TabHeading><Text>No Icon</Text></TabHeading>}>
-         
-    //     </Tab>
-    //     <Tab heading={ <TabHeading></TabHeading>}>
-          
-    //     </Tab>
-    //   </Tabs>
-    // </Container>
+      // <View style={styles.container}>
+      //   <Text style={styles.welcome}>
+      //     R
+      //   </Text>
+      //   <Header></Header>
+      //   <Image source="https://pp.userapi.com/c627723/v627723684/2137d/aQAOkMKgpSQ.jpg"></Image>
+      //   <Text style={styles.instructions}>
+      //     To get started, edit App.js
+      //   </Text>
+      //   <Text style={styles.instructions}>
+      //     {instructions}
+      //   </Text>
+      // </View>
+      
+      <Container>
+      <Header>
+      <Text style={styles.welcome}>Some Styled text</Text>
+      </Header>
+      </Container>
+   
     );
   }
 }
@@ -64,6 +58,7 @@ const styles = StyleSheet.create({
   },
   welcome: {
     fontSize: 20,
+    color: 'white',
     textAlign: 'center',
     margin: 10,
   },
